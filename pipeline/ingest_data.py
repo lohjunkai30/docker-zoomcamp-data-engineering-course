@@ -45,7 +45,7 @@ parse_dates = [
 @click.option('--target-table', default='yellow_taxi_data', help='Target DB table name')
 @click.option('--chunksize', default=100000, type=int, help='CSV read chunksize')
 
-def run(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, target_table, chunksize):
+def run(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, target_table, chunksize, url):
 
     prefix = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow'
     url = f'{prefix}/yellow_tripdata_{year}-{month:02d}.csv.gz'
